@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+tr:hover {
+  border-bottom: solid 1.5px #ebeff2;
+  cursor: pointer;
+}
+table {
+  width: 70vw;
+  overflow: auto;
+}
+
+td {
+  border-bottom: solid 1.5px #ebeff2;
+  padding: 1%;
+  padding: 10px 25px 10px 25px;
+  background: white;
+  font-family: poppins;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.13vh;
+  text-align: start;
+  white-space: nowrap;
+  color: #707683;
+}
+th {
+  border-bottom: solid 1.5px #ebeff2;
+}
+
+.headers {
+  padding: 10px 25px 10px 25px;
+  font-family: poppins;
+  font-weight: 500;
+  font-size: 2vh;
+  color: #334d6e;
+  opacity: 50%;
+  text-align: start;
+}
