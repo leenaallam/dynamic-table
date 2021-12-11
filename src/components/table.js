@@ -12,11 +12,11 @@ const Table = () => {
   const [tableData2, setTableData2] = React.useState([]);
 
   useEffect(() => {
-    fetch("http://universities.hipolabs.com/search?country=United+Kingdom")
+    fetch("https://jsonplaceholder.typicode.com/todos/")
       .then((Data) => Data.json())
       .then((Data) => setTableData1(Data));
     // console.log(tableData1[0]);
-  });
+  }, []);
 
   function retheaders1() {
     //tableData1.map
@@ -29,22 +29,30 @@ const Table = () => {
   }
 
   function retrows1() {
-    var col = [];
-    var col2 = [[]];
-    const col3 = "";
-    for (var key in tableData1[0]) {
-      if (col.indexOf(key) === -1) {
-        col.push(key);
-      }
-    }
+    // var col = [];
+    // var col2 = [[]];
+    // const col3 = "";
+    // for (var key in tableData1[0]) {
+    //   if (col.indexOf(key) === -1) {
+    //     col.push(key);
+    //   }
+    // }
+    // const all = [];
 
-    for (var i = 0; i < tableData1.length; i++) {
-      for (var key in tableData1[i]) {
-        return Object.keys(tableData1[i]).map((key, index) => (
-          <td>{tableData1[i][key]}</td>
-        ));
-      }
-    }
+    return tableData1.map((row) => {
+      return (
+        <tr>
+          {Object.keys(row).map((key, index) => (
+            <td>{row[key].toString()}</td>
+          ))}
+        </tr>
+      );
+    });
+    // for (var key in tableData1[i]) {
+    //   return Object.keys(tableData1[i]).map((key, index) => (
+    //     <td>{tableData1[i][key]}</td>
+    //   ));
+    // }
   }
 
   return (
@@ -53,26 +61,23 @@ const Table = () => {
       <div className="searchbar">
         {" "}
         <Searchicon className="searchicon" />
-        <label className="searchname">
-          <input
-            style={{
-              border: "none",
-              outline: "none",
-              color: "#90a0b7",
-              fontSize: "1vw",
-            }}
-            placeholder="Search"
-          />
-        </label>
+        <input
+          className="searchname"
+          style={{
+            border: "none",
+            outline: "none",
+            color: "#90a0b7",
+            fontSize: "1vw",
+          }}
+          placeholder="Search"
+        />
       </div>
       <Filter />
       <table id="table1">
         <thead>
           <tr> {retheaders1()}</tr>
         </thead>
-        <tbody>
-          <tr>{retrows1()}</tr>
-        </tbody>
+        <tbody>{retrows1()}</tbody>
       </table>
     </div>
   );

@@ -2,11 +2,12 @@
 
 .searchbar {
   width: 68vw;
-  height: 8vh;
+  height: 4vw;
   background-color: white;
   text-align: start;
   margin-left: 16vw;
   margin-top: 2vw;
+  display: flex;
 }
 .searchname {
   font-family: poppins;
@@ -18,6 +19,9 @@
   color: #90a0b7;
 }
 
+.searchname::placeholder {
+  color: #90a0b7;
+}
 .searchicon {
   margin-left: 2vw;
   margin-top: 1.3%;
