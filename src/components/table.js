@@ -1,62 +1,79 @@
 import React, { useState, useEffect } from "react";
+import Search from "./searchbar.js";
+import Filter from "./filter.js";
 import "../stylesheets/table.css";
-import { ReactComponent as Actions } from "../actions.svg";
-const columns = [
-  { field: "id", headerName: "ID" },
-  { field: "title", headerName: "Title", width: 300 },
-  { field: "body", headerName: "Body", width: 600 },
-];
+import Dataa from "../tabladata.json";
+import { ReactComponent as Searchicon } from "../icons/search.svg";
+
+import "../stylesheets/search.css";
 
 const Table = () => {
-  const [tableData, setTableData] = useState([]);
+  const [tableData1, setTableData1] = React.useState([]);
+  const [tableData2, setTableData2] = React.useState([]);
 
   useEffect(() => {
     fetch("http://universities.hipolabs.com/search?country=United+Kingdom")
-      .then((data) => data.json())
-      .then((data) => setTableData(data));
+      .then((Data) => Data.json())
+      .then((Data) => setTableData1(Data));
+    // console.log(tableData1[0]);
   });
 
-  const renderCol1 = (tableData, id) => {
-    return (
-      <tr key={id}>
-        <td>
-          {" "}
-          <input type="checkbox" />
-        </td>
+  function retheaders1() {
+    //tableData1.map
 
-        <td>{tableData.country}</td>
-        <td>{tableData.web_pages}</td>
-        <td>{tableData.name}</td>
+    for (var key in tableData1[0]) {
+      // console.log(tableData1[0]);
 
-        <td>{tableData.alpha_two_code}</td>
+      return Object.keys(tableData1[0]).map((key) => <th>{key}</th>);
+    }
+  }
 
-        <td>{tableData.domains}</td>
+  function retrows1() {
+    var col = [];
+    var col2 = [[]];
+    const col3 = "";
+    for (var key in tableData1[0]) {
+      if (col.indexOf(key) === -1) {
+        col.push(key);
+      }
+    }
 
-        <td>
-          <Actions />
-        </td>
-      </tr>
-    );
-  };
+    for (var i = 0; i < tableData1.length; i++) {
+      for (var key in tableData1[i]) {
+        return Object.keys(tableData1[i]).map((key, index) => (
+          <td>{tableData1[i][key]}</td>
+        ));
+      }
+    }
+  }
 
   return (
     <div>
       {" "}
-      <table>
+      <div className="searchbar">
         {" "}
-        <th className="headers">
-          {" "}
-          <input type="checkbox" />{" "}
-        </th>
-        <th className="headers">Country</th>
-        <th className="headers">Web pages</th>
-        <th className="headers">Name</th>
-        <th className="headers">Alpha twocode</th>
-        <th className="headers">Domains</th>
-        <th className="headers">Actions</th>
-        {tableData.map(renderCol1)}
+        <Searchicon className="searchicon" />
+        <label className="searchname">
+          <input
+            style={{
+              border: "none",
+              outline: "none",
+              color: "#90a0b7",
+              fontSize: "1vw",
+            }}
+            placeholder="Search"
+          />
+        </label>
+      </div>
+      <Filter />
+      <table id="table1">
+        <thead>
+          <tr> {retheaders1()}</tr>
+        </thead>
+        <tbody>
+          <tr>{retrows1()}</tr>
+        </tbody>
       </table>
-      ;
     </div>
   );
 };

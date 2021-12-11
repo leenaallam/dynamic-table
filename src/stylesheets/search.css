@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+.searchbar {
+  width: 68vw;
+  height: 8vh;
+  background-color: white;
+  text-align: start;
+  margin-left: 16vw;
+  margin-top: 2vw;
+}
+.searchname {
+  font-family: poppins;
+  font-weight: 400;
+
+  font-size: 1vw;
+  margin-left: 1vw;
+
+  color: #90a0b7;
+}
+
+.searchicon {
+  margin-left: 2vw;
+  margin-top: 1.3%;
+}

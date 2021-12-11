@@ -1,37 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
-tr:hover {
-  border-bottom: solid 1.5px #ebeff2;
-  cursor: pointer;
+body {
+  background-color: #f9fafa;
 }
-table {
-  width: 70vw;
-  overflow: auto;
-}
-
-td {
-  border-bottom: solid 1.5px #ebeff2;
-  padding: 1%;
-  padding: 10px 25px 10px 25px;
-  background: white;
+#table1 {
+  text-align: center;
   font-family: poppins;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 2.13vh;
-  text-align: start;
-  white-space: nowrap;
-  color: #707683;
-}
-th {
-  border-bottom: solid 1.5px #ebeff2;
+  border-collapse: collapse;
+  margin-top: 3vw;
+  margin-left: 10vw;
+  width: 82.7vw;
 }
 
-.headers {
-  padding: 10px 25px 10px 25px;
+#table1 td {
+  width: 33%;
+}
+.td {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  /* Black/Default */
+
+  color: #000000;
+}
+
+#table1 tr:nth-child(odd) {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#table1 td:nth-child(even) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+tr:nth-child(even) td .td {
+  background-color: #f9fafa;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#table1 td {
+}
+#table1 tr:nth-child(even) .td {
+  margin-bottom: 10px;
+}
+#table1 tr {
+  /* border-bottom: 1px solid #e8e8e8; */
+  text-align: left;
+}
+
+thead tr {
+  width: 100%;
+
+  border-bottom: 1px solid #e8e8e8;
+}
+thead {
+  width: 82.7vw;
+  font-family: Poppins;
+  font-style: normal;
+
+  line-height: 27px;
+
   font-family: poppins;
   font-weight: 500;
   font-size: 2vh;
   color: #334d6e;
   opacity: 50%;
-  text-align: start;
+}
+thead th {
+  text-align: left;
+  background-color: white;
+
+  padding-top: 15px;
+  padding-bottom: 12px;
+}
+
+.filter {
+  margin-top: 5vh;
+  margin-left: -65vw;
+}
+.category {
+  font-family: poppins;
+  font-size: 0.8vw;
+
+  color: #6a707e;
+}
+.all {
+  color: #2588f8;
 }

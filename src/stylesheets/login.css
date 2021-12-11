@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+.loginblock {
+  background-color: rgb(255, 255, 255);
+  width: 35.25vw;
+  height: 36.59vw;
+  position: fixed;
+  margin-left: 31.8vw;
+  margin-top: 11.1vh;
+  border-radius: 0.5vw;
+
+  box-shadow: 0px 0.83vw 1.8vw rgba(16, 30, 115, 0.06);
+}
+
+.loginlogo {
+  margin-top: 2vw;
+}
+
+.textediting input {
+  border: none;
+
+  outline: none;
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+  border-bottom: 0.05vw solid #abb4bd;
+
+  font-size: 1.5vw;
+}
+
+.spacing {
+  margin-top: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25vw;
+}
+input {
+  outline: none;
+  border: none;
+  border-bottom: 0.07vw solid rgba(171, 180, 189, 0.3);
+  font-size: 0.83vw;
+}
+
+input::placeholder {
+  font-size: 0.83vw;
+}
+.textediting2 input {
+  border: none;
+  color: black;
+  outline: none;
+  width: 25vw;
+  background-color: white;
+  border-collapse: collapse;
+  border-bottom: 0.05vw solid #abb4bd;
+
+  font-size: 1vw;
+}
+
+.textlabel {
+  text-align: left;
+  color: #abb4bd;
+
+  font-family: poppins;
+  font-size: 1vw;
+}
+
+.textlabel2 {
+  text-align: left;
+  color: #abb4bd;
+
+  padding-top: 2vw;
+  font-family: poppins;
+  font-size: 1vw;
+}
+
+.forgetpassword {
+  font-family: poppins;
+
+  font-size: 1vw;
+
+  margin-top: 1vw;
+  margin-left: 17vw;
+  color: #0975f4;
+}
+
+.loginb {
+  width: 25vw;
+  height: 3vw;
+  background-color: #d9dde2;
+  color: white;
+  font-family: poppins;
+  font-size: 1.5vw;
+
+  border-radius: 0.2vw;
+  margin-left: 5vw;
+  margin-top: 2vw;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.loginb:hover {
+  background-color: #0975f4;
+}
