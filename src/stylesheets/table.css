@@ -4,18 +4,21 @@ body {
   background-color: #f9fafa;
 }
 #table1 {
-  text-align: center;
+  text-align: start;
   font-family: poppins;
   border-collapse: collapse;
 
   margin-top: 3vw;
-  margin-left: 10vw;
-  width: 82.7vw;
+  margin-left: 13vw;
+
   height: 100vw;
 
   box-shadow: 0px 0.83vw 1.8vw rgba(16, 30, 115, 0.06);
 }
 
+td:nth-child(1) {
+  color: black;
+}
 .td {
   font-family: Poppins;
   font-style: normal;
@@ -31,11 +34,8 @@ body {
 
 #table1 tr {
   border-bottom: 1px solid #e8e8e8;
-}
-
-#table1 tr {
-  /* border-bottom: 1px solid #e8e8e8; */
-  text-align: center;
+  text-align: start;
+  color: #707683;
 }
 
 thead tr {
@@ -44,19 +44,19 @@ thead tr {
   border-bottom: 1px solid #e8e8e8;
 }
 thead {
-  width: 82.7vw;
+  color: #334d6e;
+  opacity: 50%;
+}
+thead th {
+  text-align: start;
+  background-color: white;
+
   font-family: Poppins;
   font-style: normal;
 
   font-family: poppins;
   font-weight: 500;
   font-size: 2vh;
-  color: #334d6e;
-  opacity: 50%;
-}
-thead th {
-  text-align: center;
-  background-color: white;
 }
 
 .filter {

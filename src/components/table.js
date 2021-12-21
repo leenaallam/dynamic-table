@@ -29,19 +29,13 @@ const Table = () => {
   }
 
   function retrows1() {
-    // var col = [];
-    // var col2 = [[]];
-    // const col3 = "";
-    // for (var key in tableData1[0]) {
-    //   if (col.indexOf(key) === -1) {
-    //     col.push(key);
-    //   }
-    // }
-    // const all = [];
-
     return tableData1.map((row) => {
       return (
         <tr>
+          <td>
+            <input type="checkbox" />
+          </td>
+
           {Object.keys(row).map((key, index) => (
             <td>{row[key].toString()}</td>
           ))}
@@ -77,7 +71,10 @@ const Table = () => {
         <thead>
           <tr> {retheaders1()}</tr>
         </thead>
-        <tbody>{retrows1()}</tbody>
+        <tbody>
+          {retrows1()}
+          <tr> </tr>
+        </tbody>
       </table>
     </div>
   );
