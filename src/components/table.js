@@ -10,6 +10,7 @@ import "../stylesheets/search.css";
 const Table = () => {
   const [tableData1, setTableData1] = React.useState([]);
   const [tableData2, setTableData2] = React.useState([]);
+  const [col1, setCol] = useState("");
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos/")
@@ -24,7 +25,9 @@ const Table = () => {
     for (var key in tableData1[0]) {
       // console.log(tableData1[0]);
 
-      return Object.keys(tableData1[0]).map((key) => <th>{key}</th>);
+      return Object.keys(tableData1[0]).map((key) => {
+        return <th>{key}</th>;
+      });
     }
   }
 
@@ -64,12 +67,20 @@ const Table = () => {
             fontSize: "1vw",
           }}
           placeholder="Search"
+          onChange={(e) => {
+            setCol(e.target.value);
+          }}
         />
       </div>
       <Filter />
       <table id="table1">
         <thead>
-          <tr> {retheaders1()}</tr>
+          <tr>
+            <th>
+              <input type="checkbox" />
+            </th>
+            {retheaders1()}
+          </tr>
         </thead>
         <tbody>
           {retrows1()}

@@ -1,62 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
 body {
-  background-color: #f9fafa;
+  background-color: #f5f6f8;
 }
 #table1 {
-  text-align: start;
   font-family: poppins;
-  border-collapse: collapse;
-
+  padding-top: 1vw;
+  padding-right: 1vw;
   margin-top: 3vw;
   margin-left: 13vw;
-
+  background-color: white;
   height: 100vw;
 
-  box-shadow: 0px 0.83vw 1.8vw rgba(16, 30, 115, 0.06);
+  box-shadow: 0.1vw 0.8vw 0.9vw rgba(16, 30, 115, 0.06);
 }
 
-td:nth-child(1) {
+td:nth-child(2) {
   color: black;
-}
-.td {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1vw;
-
-  /* identical to box height, or 20px */
-
-  /* Black/Default */
-
-  color: #000000;
 }
 
 #table1 tr {
-  border-bottom: 1px solid #e8e8e8;
   text-align: start;
   color: #707683;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.5vw;
 }
 
-thead tr {
-  width: 100%;
-
-  border-bottom: 1px solid #e8e8e8;
-}
 thead {
   color: #334d6e;
+
   opacity: 50%;
 }
 thead th {
   text-align: start;
   background-color: white;
-
+  color: #334d6e;
   font-family: Poppins;
   font-style: normal;
-
-  font-family: poppins;
-  font-weight: 500;
+  padding-left: 2vw;
+  border-bottom: 0.03vw solid#EBEFF2;
+  font-weight: 400;
   font-size: 2vh;
+}
+tbody td {
+  text-align: start;
+  background-color: white;
+
+  border-bottom: 0.03vw solid#EBEFF2;
+  font-family: Poppins;
+  font-style: normal;
+  padding-left: 2vw;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+
+  font-size: 1vw;
 }
 
 .filter {
